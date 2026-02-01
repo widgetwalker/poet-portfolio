@@ -20,7 +20,7 @@ export const Layout: React.FC<LayoutProps> = ({ children, className }) => {
             {/* Navigation - Feels like a book header */}
             <nav className="w-full py-8 md:py-12 px-6 flex justify-between items-center z-10 max-w-7xl mx-auto">
                 <Link to="/" className="font-heading text-2xl tracking-widest text-ink hover:text-ink-light transition-colors cursor-pointer block">
-                    DHEER@J
+                    THEODORE
                 </Link>
                 <ul className="flex space-x-8 font-body text-sm tracking-widest uppercase text-ink/80">
                     <li>

@@ -13,8 +13,13 @@ export const About = () => {
             >
                 <div className="relative aspect-[3/4] bg-ink/5 p-4 rounded-sm">
                     {/* Placeholder for Author Image */}
-                    <div className="w-full h-full bg-ink/10 flex items-center justify-center border border-ink/20">
-                        <span className="font-handwriting text-ink/40">Author Portrait</span>
+                    {/* Author Image */}
+                    <div className="w-full h-full border border-ink/20 overflow-hidden bg-ink/5">
+                        <img
+                            src="/author.png"
+                            alt="Poet Portrait"
+                            className="w-full h-full object-cover filter sepia-[20%] contrast-110 grayscale-[30%]"
+                        />
                     </div>
                     {/* Tape/Corner effect */}
                     <div className="absolute -top-4 -left-4 w-12 h-12 border-t-2 border-l-2 border-rose/50"></div>
@@ -32,7 +37,7 @@ export const About = () => {
                     className="font-body text-lg leading-relaxed text-ink/80 space-y-6"
                 >
                     <p>
-                        I have always believed that words have texture—some are rough like stone, others smooth like river water.
+                        I have always believed that words have texture some are rough like stone, others smooth like river water.
                         My journey began in the quiet corners of libraries, tracing lines of old verses and wondering if I could add my own whisper to the conversation.
                     </p>
                     <p>

@@ -83,7 +83,7 @@ export const PoemDetail = () => {
                 className="mt-20 pt-12 border-t border-ink/10 text-center"
             >
                 <div className="font-handwriting text-2xl text-ink/40 rotate-1">
-                    ~ d.j.
+                    ~ Theodore
                 </div>
             </motion.div>
         </motion.div>
