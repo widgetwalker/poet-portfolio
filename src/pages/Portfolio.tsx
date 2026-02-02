@@ -26,18 +26,20 @@ export const Portfolio = () => {
                         viewport={{ once: true, margin: "-50px" }}
                     >
                         <Link to={`/portfolio/${poem.slug}`}>
-                            <div className="group bg-white/40 backdrop-blur-sm p-8 border border-ink/5 hover:border-ink/30 transition-all duration-500 cursor-pointer relative overflow-hidden h-full flex flex-col">
-                                {/* Hover Ink Effect - Now Red-ish to match theme? Or keep light? Keep light for readability */}
+                            <div className="group bg-white/60 backdrop-blur-sm p-8 border border-ink/5 hover:border-ink/20 transition-all duration-500 cursor-pointer relative overflow-hidden h-full flex flex-col hover:shadow-lg hover:-translate-y-1 hover:rotate-1">
+                                {/* Paper Texture Overlay for Card */}
+                                <div className="absolute inset-0 opacity-20 pointer-events-none mix-blend-multiply bg-[url('https://www.transparenttextures.com/patterns/cream-paper.png')]"></div>
+
+                                {/* Hover Ink Effect */}
                                 <div className="absolute inset-0 bg-rose/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
 
-                                <span className="font-handwriting text-rose text-sm block mb-2">{poem.category} — {poem.date}</span>
-                                <h3 className="font-heading text-2xl text-ink mb-3 group-hover:translate-x-1 transition-transform duration-300">{poem.title}</h3>
-                                <div className="font-body text-ink/70 text-sm line-clamp-3 mb-4 flex-grow">
-                                    {/* Use MagicText for excerpt? Limit complexity inside cards. Just static is fine, the CARD itself animates in. */}
+                                <span className="font-handwriting text-rose text-sm block mb-2 relative z-10">{poem.category} — {poem.date}</span>
+                                <h3 className="font-heading text-2xl text-ink mb-3 group-hover:translate-x-1 transition-transform duration-300 relative z-10">{poem.title}</h3>
+                                <div className="font-body text-ink/70 text-sm line-clamp-3 mb-4 flex-grow relative z-10">
                                     {poem.excerpt}
                                 </div>
 
-                                <div className="mt-auto flex justify-end">
+                                <div className="mt-auto flex justify-end relative z-10">
                                     <span className="font-bold text-xs uppercase tracking-widest text-ink/40 group-hover:text-ink transition-colors">Read Poem &rarr;</span>
                                 </div>
                             </div>

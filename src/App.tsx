@@ -2,6 +2,7 @@ import { Layout } from './components/layout/Layout'
 import { WatercolorSpot } from './components/ui/WatercolorSpot'
 import { InkTransition } from './components/ui/InkTransition'
 import { InkCursor } from './components/ui/InkCursor'
+import { InkClickEffect } from './components/ui/InkClickEffect'
 import { Home } from './pages/Home'
 import { Portfolio } from './pages/Portfolio'
 import { About } from './pages/About'
@@ -17,6 +18,7 @@ function App() {
   return (
     <Layout>
       <InkCursor />
+      <InkClickEffect />
       <ScrollToTop />
 
       {/* Global Background Ambience */}

@@ -26,7 +26,25 @@
     opacity: 0.6;
     z-index: 50;
     /* Texture overlays everything slightly */
+    /* Texture overlays everything slightly */
     mix-blend-mode: multiply;
+  }
+
+  body::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    background: radial-gradient(circle at center, transparent 0%, rgba(44, 62, 80, 0.03) 70%, rgba(44, 62, 80, 0.1) 100%);
+    z-index: 49; /* Below textures but above background color */
+  }
+
+  p {
+    line-height: 1.8;
+    margin-bottom: 1.5em;
   }
 }
 
