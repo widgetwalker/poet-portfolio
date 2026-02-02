@@ -1,9 +1,9 @@
-import { motion } from 'framer-motion';
+import { motion, type Variants } from 'framer-motion';
 
 export const StaggeredText = ({ text, className = "" }: { text: string, className?: string }) => {
     const letters = Array.from(text);
 
-    const container = {
+    const container: Variants = {
         hidden: { opacity: 0 },
         visible: (i = 1) => ({
             opacity: 1,
@@ -11,7 +11,7 @@ export const StaggeredText = ({ text, className = "" }: { text: string, classNam
         }),
     };
 
-    const child = {
+    const child: Variants = {
         visible: {
             opacity: 1,
             y: 0,

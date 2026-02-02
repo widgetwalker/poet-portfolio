@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useRef } from 'react';
 import { motion } from 'framer-motion';
 import anime from 'animejs';
 import { StaggeredText } from '../components/ui/StaggeredText';
