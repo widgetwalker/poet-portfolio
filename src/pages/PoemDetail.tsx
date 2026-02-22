@@ -12,7 +12,11 @@ export const PoemDetail = () => {
 
     useEffect(() => {
         window.scrollTo(0, 0);
-    }, []);
+        if (poem) {
+            document.title = `${poem.title} | Theodore`;
+        }
+    }, [poem]);
+
 
     if (!poem) {
         return (
