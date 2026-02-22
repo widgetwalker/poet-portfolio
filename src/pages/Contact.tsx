@@ -71,10 +71,17 @@ export const Contact = () => {
             setFormData({ name: '', email: '', message: '' });
             // Reset status after a few seconds
             setTimeout(() => setStatus('idle'), 5000);
-        } catch (error) {
-            console.error('Error adding document: ', error);
+        } catch (error: any) {
+            console.error('Firestore Error:', error);
             setStatus('error');
-            setErrorMessage('Something went wrong. Please try again later.');
+
+            if (error.code === 'permission-denied') {
+                setErrorMessage('Permission denied. Please check your Firestore security rules.');
+            } else if (!import.meta.env.VITE_FIREBASE_API_KEY) {
+                setErrorMessage('Firebase configuration is missing. Please check your environment variables.');
+            } else {
+                setErrorMessage('Something went wrong. Please check your internet connection or try again later.');
+            }
         }
     };
 
