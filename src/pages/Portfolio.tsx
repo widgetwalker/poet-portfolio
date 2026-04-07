@@ -39,7 +39,7 @@ export const Portfolio = () => {
     return (
         <div className="py-12 max-w-4xl mx-auto">
             <header className="mb-16 text-center">
-                <MagicText text="Collected Works" as="h1" className="font-heading text-5xl md:text-6xl text-ink mb-4" />
+                <MagicText text="Collected Works" as="h1" className="font-heading text-4xl sm:text-5xl md:text-6xl text-ink mb-4" />
                 <motion.div
                     initial={{ scaleX: 0 }}
                     animate={{ scaleX: 1 }}

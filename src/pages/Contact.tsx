@@ -87,9 +87,9 @@ export const Contact = () => {
 
     return (
         <div className="py-12 max-w-2xl mx-auto">
-            <header className="mb-16 text-center">
-                <StaggeredText text="Leave a Note" className="font-heading text-5xl md:text-6xl text-ink mb-4" />
-                <p className="font-handwriting text-xl text-ink/60 rotate-1">
+            <header className="mb-16 text-center px-4">
+                <StaggeredText text="Leave a Note" className="font-heading text-4xl sm:text-5xl md:text-6xl text-ink mb-4" />
+                <p className="font-handwriting text-lg sm:text-xl text-ink/60 rotate-1">
                     "Letters are the only way we can speak without interruption."
                 </p>
             </header>

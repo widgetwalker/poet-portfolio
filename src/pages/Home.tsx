@@ -32,17 +32,17 @@ export const Home = () => {
             {/* Ambient Background Glow */}
             <div className="absolute inset-0 bg-gradient-to-radial from-transparent to-parchment/60 pointer-events-none"></div>
 
-            <div className="mb-12 relative z-10">
+            <div className="mb-12 relative z-10 px-4">
                 <StaggeredText
                     text="The Painted Journal"
-                    className="font-heading text-6xl md:text-8xl text-ink mb-6"
+                    className="font-heading text-5xl sm:text-6xl md:text-8xl text-ink mb-6"
                 />
 
                 <motion.p
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 1.5, duration: 1 }}
-                    className="font-handwriting text-2xl md:text-3xl text-rose rotated-[-2deg]"
+                    className="font-handwriting text-xl sm:text-2xl md:text-3xl text-rose rotated-[-2deg]"
                 >
                     Where ink bleeds into soul.
                 </motion.p>

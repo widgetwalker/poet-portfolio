@@ -48,9 +48,9 @@ export const PoemDetail = () => {
             </Link>
 
             <article className="prose prose-lg prose-p:font-body prose-headings:font-heading prose-p:text-ink/80 prose-headings:text-ink max-w-none">
-                <header className="mb-12 text-center">
-                    <MagicText text={poem.date} className="font-handwriting text-rose text-lg block mb-2" delay={0.1} />
-                    <MagicText text={poem.title} as="h1" className="text-5xl md:text-6xl mb-6" delay={0.2} />
+                <header className="mb-12 text-center px-4">
+                    <MagicText text={poem.date} className="font-handwriting text-rose text-base md:text-lg block mb-2" delay={0.1} />
+                    <MagicText text={poem.title} as="h1" className="text-4xl sm:text-5xl md:text-6xl mb-6" delay={0.2} />
                     <motion.div
                         initial={{ width: 0 }}
                         whileInView={{ width: 96 }}
@@ -59,7 +59,7 @@ export const PoemDetail = () => {
                     ></motion.div>
                 </header>
 
-                <div className="font-body text-xl leading-loose md:px-12 space-y-4">
+                <div className="font-body text-lg md:text-xl leading-loose md:px-12 space-y-4">
                     {contentBlocks.map((block, index) => {
                         // If it's a break, just render it
                         if (block.includes("<br")) return <br key={index} />;

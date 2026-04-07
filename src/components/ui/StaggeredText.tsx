@@ -1,8 +1,6 @@
 import { motion, type Variants } from 'framer-motion';
 
 export const StaggeredText = ({ text, className = "" }: { text: string, className?: string }) => {
-    const letters = Array.from(text);
-
     const container: Variants = {
         hidden: { opacity: 0 },
         visible: (i = 1) => ({
@@ -29,16 +27,20 @@ export const StaggeredText = ({ text, className = "" }: { text: string, classNam
 
     return (
         <motion.h1
-            className={`inline-block ${className}`}
+            className={`flex flex-wrap justify-center ${className}`}
             variants={container}
             initial="hidden"
             whileInView="visible" // Animate when it scrolls into view
             viewport={{ once: true }}
         >
-            {letters.map((letter, index) => (
-                <motion.span variants={child} key={index}>
-                    {letter === " " ? "\u00A0" : letter}
-                </motion.span>
+            {text.split(" ").map((word, wordIndex) => (
+                <span key={wordIndex} className="inline-block whitespace-nowrap mr-[0.25em] last:mr-0">
+                    {Array.from(word).map((letter, index) => (
+                        <motion.span variants={child} key={index} className="inline-block">
+                            {letter}
+                        </motion.span>
+                    ))}
+                </span>
             ))}
         </motion.h1>
     );
